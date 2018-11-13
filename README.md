@@ -53,7 +53,7 @@ In this project, i use some test images to build a pipelin and then apply to vid
 ![alt text][image7]
 ### 7. Draw extension line
 
-    **Approach:** Firstly, I calculated slope, intercept and length for every hough line segment (left and right) and stroe them into a list. Secondly, I utilized the length of each line segment as weight to calculate the average of slope and intercept. Finally, I use constant y1 and y2 which are relevant to the margin of the mask region and calculate x1 and x2 by using the average slope and intercept.
+   **Approach:** Firstly, I calculated slope, intercept and length for every hough line segment (left and right) and stroe them into a list. Secondly, I utilized the length of each line segment as weight to calculate the average of slope and intercept. Finally, I use constant y1 and y2 which are relevant to the margin of the mask region and calculate x1 and x2 by using the average slope and intercept.
 
 ![alt text][image8]
 
