@@ -4,7 +4,6 @@
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
 ---
-
 **Goals:** Find Lane Lines on the Road
 
 **Tools:** Python and OpenCV
@@ -53,7 +52,7 @@ In this project, i use some test images to build a pipelin and then apply to vid
 ![alt text][image7]
 ### 7. Draw extension line
 
-   **Approach:** Firstly, I calculated slope, intercept and length for every hough line segment (left and right) and stroe them into a list. Secondly, I utilized the length of each line segment as weight to calculate the average of slope and intercept. Finally, I use constant y1 and y2 which are relevant to the margin of the mask region and calculate x1 and x2 by using the average slope and intercept.
+    **Approach:** Firstly, I calculated slope, intercept and length for every hough line segment (left and right) and stroe them into a list. Secondly, I utilized the length of each line segment as weight to calculate the average of slope and intercept. Finally, I use constant y1 and y2 which are relevant to the margin of the mask region and calculate x1 and x2 by using the average slope and intercept.
 
 ![alt text][image8]
 
@@ -64,4 +63,14 @@ In this project, i use some test images to build a pipelin and then apply to vid
 * [solidYellowLeft](./test_videos_output/solidYellowLeft.mp4) 
 * [challenge](./test_videos_output/challenge.mp4) 
 
+---
+## Potential shortcomings
+* The lines on the videos are not stable and shake a lot
+* Drawing a straight line may cause problem when the car is turining
+* This pipeline is not tested to apply in different videos with different light condition and weather
 
+---
+## Suggestions
+* To remove shekiness, a easy way is to average the current frame lines with the previous frame lines
+* It is possible to detect the curve ahead and then extrapolate a polygon line based on the slopes of the previous lines/frames
+* To improve the performance of pipeline and apply to a variety situation, one way it to utilize auto thresholding for Canny Edge Detection   
